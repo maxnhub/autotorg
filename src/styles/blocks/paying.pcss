@@ -1,0 +1,41 @@
+.paying {
+    &__desc {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 15px; 
+        flex: 1;
+        @include desktop {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        @include phones {
+            align-items: center;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+        @include small-phones {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &-text {
+            font-size: 16px;
+            line-height: 18px;
+            letter-spacing: 0.025rem;
+            display: flex;
+            align-items: center;
+            min-width: 241px;
+            @include desktop {
+                text-align: right;
+                max-width: 240px;
+            }
+            @include phones {
+                text-align: left;
+            }
+        }
+    }
+    &__image {
+        @include desktop {
+            width: 220px;
+        }
+    }
+}

@@ -12,9 +12,10 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.42;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.45px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $text-color;
@@ -28,19 +29,74 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 1480px;
-  width: 95%;
-  // width: 1490px;
+  min-width: 1200px;
+  width: 100%;
+  padding: 0 75px;
+  @include desktopHd {
+    min-width: auto;
+    max-width: 1200px;
+  }
+  @include tablets {
+    padding: 0 40px;
+  }
+  @include small-phones {
+    padding: 0 20px;
+    flex-direction: column;
+  }
+
+  &--buying {
+    box-shadow: 0 3px 6px 0 #00000029;
+  }
+
+  &--section {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+
+  }
+  &--reverse {
+    @include small-phones {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &--paying {
+    /* display: flex;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: 56% 38%;
+    grid-gap: 30px;
+    padding: 26px 35px 26px 75px;
+    background: #fff;
+    @include desktop {
+      grid-template-columns: 66% 30%;
+    }
+    @include phones {
+      display: flex;
+      flex-direction: column;
+      padding-top: 25px;
+    }
+    @include small-phones {
+      padding: 21px 0px 10px 20px;
+    }
+  }
+
+  @include desktop {
+    
+  }
+
+  
 
   @include phones {
-    width: 85%;
+    
+  }
+
+  @include small-phones {
+    
   }
 }
 
-.fullscreen-section {
-  height: 100vh;
-  min-height: 650px;
-}
 
 button {
   border: 0;
@@ -74,12 +130,12 @@ p {
 
 button[type="button"] {
   cursor: pointer;
-  background-color: transparent;
 }
 
 a {
   color: inherit;
   cursor: pointer;
+  text-decoration: none;
 }
 
 img {
@@ -87,3 +143,21 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
+
+.page-title {
+  font-size: 50px;
+  line-height: 55px;
+  letter-spacing: 1.25px;
+  margin-bottom: 20px;
+  @include small-phones {
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0.63px;
+    margin-bottom: 7px;
+    font-weight: bold;
+  }
+}
+
+//- +image('content/user.jpg', 'user-pic')
+//- +icon('link', 'link-class')
+//-.icon-bg

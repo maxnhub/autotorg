@@ -1,0 +1,19 @@
+.footer {
+    height: 83px;
+    background: #4B555A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    &__text {
+        font-size: 14px;
+        letter-spacing: 0.35px;
+        line-height: 25px;
+        opacity: 0.53;
+        @include small-phones {
+            font-size: 10px;
+            letter-spacing: 0.25px;
+            line-height: 25px;
+        }
+    }
+}

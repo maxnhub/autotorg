@@ -6,11 +6,104 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    link(href="https://img.icons8.com/pastel-glyph/64/000000/hearts.png" rel="shortcut icon" type="image/x-icon")
+    link(href="" rel="shortcut icon" type="image/x-icon")
+    link(href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet")
     title Portfolio | main page
   body
     .wrapper
       .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+        header.header
+          .header__logo
+            +image('content/logo.png', 'header__logo-icon')
+          .header__phone
+            +icon('phone', 'header__phone-icon')
+            a.header__phone-text(href="tel:84957305115") +7 (495) 730-51-15
+        main.main
+          .container.container--buying
+            section.buying
+              .buying__desc
+                h1.page-title Оплачивать покупки удобнее с Apple Pay
+                .buying__desc-text Пользуйтесь всеми преимуществами карт Автоторгбанка с Apple Pay. Совершайте покупки в магазинах, приложениях и на интернет-сайтах. Это быстро и просто.
+                button.buying__desc-btn(type="button") Оформить карту
+              +image('content/section1.png', 'buying__image')
+          section.settings
+            .container
+              h2.section__title Настроить Apple Pay очень просто
+          section.section.section--iphone
+            .container.container--section
+              .section__desc
+                h2.section__title iPhone
+                ul.section__list
+                  li.section__item Откройте приложение Wallet. 
+                  li.section__item Коснитесь значка «+» в правом верхнем углу. 
+                  li.section__item Введите код безопасности, чтобы добавить кредитную или дебетовую карту, привязанную к вашей учётной записи iTunes. 
+                  li.section__item Или выберите «Добавить другую карту» и отсканируйте её при помощи камеры iPhone.
+              +image('content/section2.png', 'section__image section__image--iphone')
+          section.section.section--watch
+            .container.container--section.container--reverse
+              +image('content/section3.png', 'section__image section__image--watch')
+              .section__desc
+                h2.section__title Apple Watch
+                ul.section__list
+                  li.section__item Откройте Настройки.
+                  li.section__item Коснитесь «Wallet и Apple Pay» и выберите «Добавить кредитную или дебетовую карту».
+                  li.section__item Введите код безопасности, чтобы добавить кредитную или дебетовую карту, привязанную к вашей учётной записи iTunes. 
+                  li.section__item Или выберите «Добавить другую карту» и отсканируйте её при помощи камеры iPhone.
+          section.section.section--ipad
+            .container.container--section
+              .section__desc
+                h2.section__title iPad
+                ul.section__list
+                  li.section__item Откройте Настройки.
+                  li.section__item Коснитесь «Wallet и Apple Pay» и выберите «Добавить кредитную или дебетовую карту».
+                  li.section__item Введите код безопасности, чтобы добавить кредитную или дебетовую карту, привязанную к вашей учётной записи iTunes. 
+                  li.section__item Или выберите «Добавить другую карту» и отсканируйте её при помощи камеры iPad.
+              +image('content/section4.png', 'section__image section__image--ipad')
+          section.section.section--pro
+            .container.container--section.container--reverse
+              +image('content/section5.png', 'section__image section__image--pro')
+              .section__desc
+                h2.section__title MacBook Pro с Touch
+                ul.section__list
+                  li.section__item Откройте Системные настройки.
+                  li.section__item Коснитесь «Wallet и Apple Pay» и выберите «Добавить кредитную или дебетовую карту».
+                  li.section__item Введите код безопасности, чтобы добавить кредитную или дебетовую карту, привязанную к вашей учётной записи iTunes. 
+                  li.section__item Или выберите «Добавить другую карту» и отсканируйте её при помощи камеры MacBook Pro.
+          section.paying
+            .container.container--paying
+              h2.section__title.section__title--paying Оплатить покупки и услуги с помощью Apple Pay очень удобно
+              .paying__desc
+                p.paying__desc-text Apple Pay работает везде, где есть один из этих значков.
+                +image('content/paying.png', 'paying__image')
+          section.section.section--store
+            .section__field.section__field--store
+              h2.section__title В магазинах
+              p.section__subtitle Расплатиться на кассе можно с помощью iPhone и Apple Watch, которые всегда у вас под рукой.*
+              ul.section__list
+                li.section__item Если для оплаты вы используете Face ID, нажмите дважды боковую кнопку iPhone, посмотрите на экран и поднесите устройство к терминалу. 
+                li.section__item Если вы платите с Touch ID, поднесите iPhone к терминалу, удерживая палец на датчике. 
+                li.section__item На Apple Watch дважды нажмите боковую кнопку и поднесите их к терминалу для оплаты.
+            .section__background.section__background--store
+          section.section.section--apps
+            .section__background.section__background--apps
+            .section__field.section__field--apps
+              h2.section__title В приложениях и на веб-сайтах
+              p.section__subtitle Apple Pay — это более быстрый и безопасный способ оплаты в интернете. Вам больше не придётся для этого регистрироваться и заполнять длинные формы.*
+              ul.section__list
+                li.section__item Если вы оплачиваете покупку на iPhone или iPad — в приложении или на веб-сайте в браузере Safari, — выберите Apple Pay при оформлении заказа и подтвердите покупку, используя Face ID или Touch ID.
+                li.section__item Чтобы оформить покупку онлайн в браузере Safari на Mac, выберите Apple Pay и подтвердите оплату с помощью iPhone или Apple Watch.
+                li.section__item На MacBook Pro это можно сделать, используя датчик Touch ID на панели Touch Bar.
+              .section__subtext
+                p.section__subtext-text *Перечень устройств, совместимых с Apple Pay, приведён на странице 
+                a.section__subtext-link(href="support.apple.com/ru-ru/km207105.") support.apple.com/ru-ru/km207105.
+          section.section.section--contacts
+            .section__field.section__field--contacts
+              h2.section__title.section__title--contacts Контакты
+              p.section__phone +7 (495) 730-51-15
+              p.section__phone +7 (495) 136-51-15
+              p.section__text.section__text--bold Центральный офис 
+              p.section__text г. Москва, 1-я Магистральная улица, д.13, стр. 2
+              a.section__text-link info@avtotorgbank.ru
+            .section__background.section__background--contacts
+          footer.footer
+            p.footer__text © 2006–2019, ООО «АТБ» Банк, лицензия ЦБ РФ № 2776
