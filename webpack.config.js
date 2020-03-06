@@ -81,7 +81,7 @@ module.exports = (env, argv) => {
         ]
     };
 
-    const fonts = {
+    const font = {
         test: /\.(otf|eot|ttf|woff|woff2)$/,
         use: [
             {
@@ -102,7 +102,7 @@ module.exports = (env, argv) => {
             chunkFilename: "[chunkhash].js"
         },
         module: {
-            rules: [pcss, vue, js, files, svg, pug, fonts]
+            rules: [pcss, vue, js, files, svg, pug, font]
         },
         resolve: {
             alias: {
