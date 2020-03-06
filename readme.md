@@ -16,6 +16,7 @@
 
 ```sh
 1. Follow to the link
+https://maxnhub.github.io/autotorg/
 
 
 ```
