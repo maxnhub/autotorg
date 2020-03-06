@@ -1,5 +1,5 @@
 
-# Страница Autotorg
+# Страница Apple Pay для Autotorg
 
 ##  Максим Никульников
 
